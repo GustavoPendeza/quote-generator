@@ -1,0 +1,194 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 6rem;
+}
+
+.randomButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  appearance: none;
+  text-decoration: none;
+  border: 0;
+  background: transparent;
+  color: #4f4f4f;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  cursor: pointer;
+}
+
+/* -------------- MAIN -------------- */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  gap: 6.5rem;
+}
+
+/* -------------- QUOTE -------------- */
+
+.quoteContainer {
+  border-left: 8px solid #f7df94;
+  padding: 0 6.1rem;
+  height: fit-content;
+}
+
+.quote {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 120%;
+  width: 614px;
+  margin: 0;
+}
+
+/* -------------- AUTHOR -------------- */
+
+.authorContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  width: 672px;
+  padding: 2rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.authorContainer:hover {
+  background: #333;
+}
+
+.authorTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.author {
+  color: #4f4f4f;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  transition: 0.2s;
+}
+
+.authorContainer:hover > .authorTexts > .author {
+  color: #f2f2f2;
+}
+
+.genre {
+  color: #828282;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.arrow {
+  display: none;
+  font-size: 40px;
+  color: #f2f2f2;
+  transition: 0.2s;
+}
+
+.authorContainer:hover > .arrow {
+  display: block;
+}
+
+/* -------------- QUOTE LIST PAGE -------------- */
+
+.mainQuoteList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9rem;
+}
+
+/* -------------- TITLE -------------- */
+
+.titleContainer {
+  padding: 0 6.1rem;
+  margin-top: 3rem;
+}
+
+.title {
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  width: 614px;
+}
+
+/* -------------- LOADING -------------- */
+
+@keyframes spinner {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+  border-top: 5px solid #f7df94;
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+/* ---------- PAGINATION ---------- */
+
+.paginationButtons {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 0;
+}
+
+.paginationButtons a {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  margin: 8px;
+  border-radius: 6px;
+  color: #333;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.paginationButtons a:hover {
+  background: #333;
+  color: #f2f2f2;
+}
+
+.activePaginationButton a {
+  background: #333;
+  color: #f2f2f2;
+  cursor: default;
+}
+
+.disabledPaginationButton a {
+  color: #a7a6a6;
+}
+
+.disabledPaginationButton a:hover {
+  background: transparent;
+  color: #a7a6a6;
+  cursor: not-allowed;
+}
